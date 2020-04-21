@@ -14,3 +14,7 @@ print(b)
 comment_text = re.compile(r'/\*((?:.|\n)*?)\*/')
 c = comment_text.findall(text2)
 print(c)
+
+comment_text_2 = re.compile(r'/\*(.*?)\*/', re.DOTALL)
+d = comment_text_2.findall(text2)
+print(d)
