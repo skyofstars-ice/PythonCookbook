@@ -12,4 +12,7 @@ import sys
 cmb_chrs = dict.fromkeys(c for c in range(sys.maxunicode)
 						if unicodedata.combining(chr(c)))
 b = unicodedata.normalize('NFD', a)
-print(b)   #python is awesome\n
+print(b)   #  python is awesome\n
+
+c = b.translate(cmb_chrs)
+print(c)	#  python is awesome\n
