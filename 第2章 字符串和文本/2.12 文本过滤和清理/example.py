@@ -6,3 +6,10 @@ remap = {
 }
 a = s.translate(remap)
 print(a)    # python is awesome\n
+
+import unicodedata
+import sys
+cmb_chrs = dict.fromkeys(c for c in range(sys.maxunicode)
+						if unicodedata.combining(chr(c)))
+b = unicodedata.normalize('NFD', a)
+print(b)   #python is awesome\n
