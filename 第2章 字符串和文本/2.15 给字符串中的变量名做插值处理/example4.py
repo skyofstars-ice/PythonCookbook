@@ -1,5 +1,4 @@
 import sys
-s = '{name} has {n} messages'
 
 class safesub(dict):
 	def __missing__(self, key):
@@ -11,3 +10,5 @@ def sub(text):
 name = 'Guido'
 n = 37
 print(sub('Hello {name}'))  #  Hello Guido
+print(sub('You have {n} messages'))  #  You have 37 messages
+print(sub('Your favorite color is {color}'))  #  Your favorite color is {color}
