@@ -6,7 +6,7 @@ class safesub(dict):
 
 def sub(text):
 	return text.format_map(safesub(sys._getframe(1).f_locals))
-
+# sub()函数使用了sys._getframe(1)来返回调用方的栈帧。通过访问属性f_locals来得到局部变量
 name = 'Guido'
 n = 37
 print(sub('Hello {name}'))  #  Hello Guido
